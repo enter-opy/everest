@@ -1,11 +1,29 @@
-# Peaks evaluation
-Peak evaluation on spectra using deep learning
-<h2><u>References</u></h2>
-<ul>
-    <li>
-        <a href="https://www.researchgate.net/publication/333266782_Using_deep_learning_to_evaluate_peaks_in_chromatographic_data">Anne Bech Risum, Rasmus Bro (2019). Using deep learning to evaluate peaks in chromatographic data.</a>
-    </li>
-    <li>
-        <a href="https://pubs.acs.org/doi/10.1021/acs.analchem.9b04811">Arsenty D. Melnikov, Yuri P. Tsentalovich, Vadim V. Yanshole (2019). Deep Learning for the Precise Peak Detection in High-Resolution LC-MS Data.</a>
-    </li>
-</ul>
+# Everest
+Peaks identification using CNN
+
+<p align="center"><img src="res/plot.png" width="500"></p>
+
+## Model 
+
+```mermaid
+graph LR;
+    Conv1D1[<b>Conv</b> \n<span style="font-size: smaller;">20 channels</span>] --> MaxPool[MaxPool];
+    MaxPool --> Conv1D2[Conv1D\n<span style="font-size: smaller;">40 channels</span>];
+    Conv1D2 --> Flatten[Flatten];
+    Flatten --> Dense1[Fully connected \n<span style="font-size: smaller;">20 units</span>];
+    Dense1 --> Dense2[Fully connected \n<span style="font-size: smaller;">4 units</span>];
+    Dense2 --> Output[Sigmoid];
+```
+
+## Contributing
+Contributions to Everest are welcome! If you'd like to contribute, follow these steps:
+1. **Fork the Repository:** Start by forking the [Everest](https://github.com/enter-opy/everest).
+2. **Make Changes:** Create a new branch , make your changes, and commit them to your branch.
+3. **Create a Pull Request:** Push your changes to your fork and submit a pull request to the original repository.
+## License
+This project is licensed under the GNU General Public License. See the [LICENSE](https://github.com/enter-opy/everest/blob/main/LICENSE) for details.
+
+### References
+
+- Anne Bech Risum, Rasmus Bro, [Using deep learning to evaluate peaks in chromatographic data](https://www.researchgate.net/publication/333266782_Using_deep_learning_to_evaluate_peaks_in_chromatographic_data), 2019
+- Arsenty D. Melnikov, Yuri P. Tsentalovich, Vadim V. Yanshole, [Deep Learning for the Precise Peak Detection in High-Resolution LC-MS Data](https://pubs.acs.org/doi/10.1021/acs.analchem.9b04811), 2019
