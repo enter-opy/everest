@@ -6,7 +6,7 @@ model = tf.keras.models.load_model('model/model.h5')
 window_size = 20
 hop_size = 5
 
-def find_peaks(X, threshold=0.5):
+def find_peaks(X, threshold=0.5, return_probs=True):
     """
     Parameters:
     - X (array-like): Input array representing the signal.
@@ -17,6 +17,9 @@ def find_peaks(X, threshold=0.5):
     - peaks_mag (ndarray): Values of the peaks.
     - probs (ndarray): Probabilities associated with each peak.
     """
+
+    assert isinstance(X, (np.ndarray)), "Input must be of type numpy.array."
+    assert 0 <= threshold <= 1, "Threshold must be between 0 and 1."
 
     peaks_loc = []
     probs = []
@@ -33,7 +36,8 @@ def find_peaks(X, threshold=0.5):
 
             if peak_loc not in peaks_loc:
                 peaks_loc.append(peak_loc)
-                probs.append(prediction)
+                if return_probs:
+                    probs.append(prediction)
         
         l += hop_size
 
@@ -41,9 +45,12 @@ def find_peaks(X, threshold=0.5):
 
     peaks_loc = np.array(peaks_loc)
     peaks_val = np.array(peaks_val)
-    probs = np.array(probs)
 
-    return peaks_loc, peaks_val, probs
+    if return_probs:
+        probs = np.array(probs)
+        return peaks_loc, peaks_val, probs
+    else:
+        return peaks_loc, peaks_val
 
 
 
