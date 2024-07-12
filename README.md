@@ -30,7 +30,7 @@ peaks_loc, peaks_mag, probs = find_peaks(X, threshold=0.5)
 ## Model 
 
 ```mermaid
-%%{init: {'theme': 'default', 'securityLevel': 'strict', 'startOnLoad': true, 'flowchart': {'htmlLabels': false, 'useMaxWidth': true}}}%%
+
 graph LR;
     Conv1D1[<b>Conv</b> \n<span style="font-size: smaller;">20 channels</span>] --> MaxPool[MaxPool];
     MaxPool --> Conv1D2[Conv1D\n<span style="font-size: smaller;">40 channels</span>];
@@ -38,6 +38,8 @@ graph LR;
     Flatten --> Dense1[Fully connected \n<span style="font-size: smaller;">20 units</span>];
     Dense1 --> Dense2[Fully connected \n<span style="font-size: smaller;">4 units</span>];
     Dense2 --> Output[Sigmoid];
+
+    class Conv1D1,MaxPool,Conv1D2,Flatten,Dense1,Dense2,Output non-interactive;
 ```
 
 ## Results
