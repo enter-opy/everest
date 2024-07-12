@@ -1,3 +1,5 @@
-/.ipynb_checkpoints
-/samples
+notebooks/.ipynb_checkpoints
 /venv
+/everest.egg-info
+/dist
+/build
