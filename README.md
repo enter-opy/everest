@@ -1,7 +1,7 @@
 # Everest
 Peaks identification using CNN
 
-<p align="center"><img src="res/plot.png" width="500"></p>
+<p align="center"><img src="res/plot.png" width="600"></p>
 
 ## Model 
 
