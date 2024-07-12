@@ -1,19 +1,20 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1'
+with open('README.md') as f:
+    description = f.read()
 
 setup(
-    name="everest",
-    version=VERSION,
+    name="volcano",
+    version='0.0.1',
     packages=find_packages(),
     install_requires=['numpy', 'tensorflow'],
     include_package_data=True,
     classifiers=[
-        "Development Status :: 1 - Production",
-        "Intended Audience :: Developers, Researchers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ]
+    ],
+    long_description=description,
+    long_description_content_type='text/markdown'
 )

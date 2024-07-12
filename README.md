@@ -1,26 +1,23 @@
-# Everest
+# Volcano
 Peaks identification using CNN
 
 <p align="center"><img src="res/plot.png" width="600"></p>
 
-## Setup
-Clone the Repository.
+## Usage
 ```bash
-git clone https://github.com/enter-opy/everest.git
-cd everest
+pip install volcano
 ```
 
-## Usage
-
 ```python
-from everest import find_peaks
+from volcano import find_peaks
 
 peaks_loc, peaks_mag, probs = find_peaks(X, threshold=0.5)
 ```
 
 ### Parameters
 - `X` (_array-like_): Input array representing the signal.
-- `threshold` (_float_): Probability threshold for identifying peaks.
+- `threshold` (_float_): Probability threshold for identifying peaks (_default_=`0.5`).
+- `return_probs` (_bool_): Set this to `True` to return `probs` (_default_=`True`).
 
 ### Returns
 - `peaks_loc` (_numpy.array_): Locations of the peaks.
@@ -32,12 +29,12 @@ peaks_loc, peaks_mag, probs = find_peaks(X, threshold=0.5)
 <p align="center"><img src="res/find_peaks.png" width="400"></p>
 
 ## Contributing
-Contributions to Everest are welcome! If you'd like to contribute, follow these steps:
-1. **Fork the Repository:** Start by forking the [Everest](https://github.com/enter-opy/everest).
+Contributions to Volcano are welcome! If you'd like to contribute, follow these steps:
+1. **Fork the Repository:** Start by forking the [Volcano](https://github.com/enter-opy/volcano).
 2. **Make Changes:** Create a new branch , make your changes, and commit them to your branch.
 3. **Create a Pull Request:** Push your changes to your fork and submit a pull request to the original repository.
 ## License
-This project is licensed under the GNU General Public License. See the [LICENSE](https://github.com/enter-opy/everest/blob/main/LICENSE) for details.
+This project is licensed under the GNU General Public License. See the [LICENSE](https://github.com/enter-opy/volcano/blob/main/LICENSE) for details.
 
 ### References
 

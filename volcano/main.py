@@ -13,6 +13,7 @@ def find_peaks(X, threshold=0.5, return_probs=True):
     Parameters:
     - X (array-like): Input array representing the signal.
     - threshold (float): Probability threshold for identifying peaks.
+    - return_probs (bool): Set this to True to return the probs.
 
     Returns:
     - peaks_loc (ndarray): Locations of the peaks.
