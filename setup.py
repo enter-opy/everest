@@ -4,7 +4,7 @@ with open('README.md') as f:
     description = f.read()
 
 setup(
-    name="volcano",
+    name="everest",
     version='0.0.1',
     packages=find_packages(),
     install_requires=['numpy', 'tensorflow'],
@@ -14,7 +14,5 @@ setup(
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ],
-    long_description=description,
-    long_description_content_type='text/markdown'
+    ]
 )
