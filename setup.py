@@ -7,6 +7,7 @@ setup(
     version=VERSION,
     packages=find_packages(),
     install_requires=['numpy', 'tensorflow'],
+    include_package_data=True,
     classifiers=[
         "Development Status :: 1 - Production",
         "Intended Audience :: Developers, Researchers",

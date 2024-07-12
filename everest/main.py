@@ -1,7 +1,9 @@
 import numpy as np
 import tensorflow as tf
+import os
 
-model = tf.keras.models.load_model('model/model.h5')
+model_path = os.path.join(os.path.dirname(__file__), 'model.h5')
+model = tf.keras.models.load_model(model_path)
 
 window_size = 20
 hop_size = 5
