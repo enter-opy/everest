@@ -15,6 +15,34 @@ graph LR;
     Dense2 --> Output[Sigmoid];
 ```
 
+## Setup
+Clone the Repository.
+```bash
+git clone https://github.com/enter-opy/everest.git
+cd everest
+```
+
+## Usage
+
+```python
+from everest import find_peaks
+
+peaks_loc, peaks_mag, probs = find_peaks(X, threshold=0.5)
+```
+
+### Parameters
+- `X` (_array-like_): Input array representing the signal.
+- `threshold` (_float_): Probability threshold for identifying peaks.
+
+### Returns
+- `peaks_loc` (_numpy.array_): Locations of the peaks.
+- `peaks_mag` (_numpy.array_): Values of the peaks.
+- `probs` (_numpy.array_): Probabilities associated with each peak.
+
+## Results
+
+<p align="center"><img src="res/find_peaks.png" width="400"></p>
+
 ## Contributing
 Contributions to Everest are welcome! If you'd like to contribute, follow these steps:
 1. **Fork the Repository:** Start by forking the [Everest](https://github.com/enter-opy/everest).
