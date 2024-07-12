@@ -35,9 +35,9 @@ graph LR;
     Conv1D1[<b>Conv</b> \n<span style="font-size: smaller;">20 channels</span>] --> MaxPool[MaxPool];
     MaxPool --> Conv1D2[Conv1D\n<span style="font-size: smaller;">40 channels</span>];
     Conv1D2 --> Flatten[Flatten];
-    Flatten --> Dense1[Fully connected \n<span style="font-size: smaller;">20 units</span>];
-    Dense1 --> Dense2[Fully connected \n<span style="font-size: smaller;">4 units</span>];
-    Dense2 --> Output[Sigmoid];
+    Flatten --> Dense1[FC \n<span style="font-size: smaller;">20 units</span>];
+    Dense1 --> Dense2[FC \n<span style="font-size: smaller;">4 units</span>];
+    Dense2 --> Output[$$\sigma$$];
 
     class Conv1D1,MaxPool,Conv1D2,Flatten,Dense1,Dense2,Output non-interactive;
 ```
