@@ -5,7 +5,7 @@ Peaks identification using CNN
 
 ## Usage
 
-To install the `everest`, download the release and run the following pip command:
+To install `everest`, download the release and run the following pip command:
 ```bash
 pip install everest-0.0.1-py3-none-any.whl
 ```
@@ -26,6 +26,18 @@ peaks_loc, peaks_mag, probs = find_peaks(X, threshold=0.5)
 - `peaks_loc` (_numpy.array_): Locations of the peaks.
 - `peaks_mag` (_numpy.array_): Values of the peaks.
 - `probs` (_numpy.array_): Probabilities associated with each peak.
+
+## Model 
+
+```mermaid
+graph LR;
+    Conv1D1[<b>Conv</b> \n<span style="font-size: smaller;">20 channels</span>] --> MaxPool[MaxPool];
+    MaxPool --> Conv1D2[Conv1D\n<span style="font-size: smaller;">40 channels</span>];
+    Conv1D2 --> Flatten[Flatten];
+    Flatten --> Dense1[Fully connected \n<span style="font-size: smaller;">20 units</span>];
+    Dense1 --> Dense2[Fully connected \n<span style="font-size: smaller;">4 units</span>];
+    Dense2 --> Output[Sigmoid];
+```
 
 ## Results
 
